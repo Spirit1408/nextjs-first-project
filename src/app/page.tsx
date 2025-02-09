@@ -1,4 +1,7 @@
 import AddCompanyButton from "./components/add-company-button";
+import ClientComponent from "./components/client-component";
+import ServerComponent from "./components/server-component";
+import ServerComponentCopy from "./components/server-component-copy";
 
 export default function Home() {
 	return (
@@ -7,6 +10,10 @@ export default function Home() {
 				Home page. Local time: {new Date().toTimeString()}
 			</h1>
 			<AddCompanyButton />
+			<ServerComponent />
+			<ClientComponent>
+				<ServerComponentCopy />
+			</ClientComponent>
 		</main>
 	);
 }
