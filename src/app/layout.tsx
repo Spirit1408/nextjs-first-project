@@ -8,6 +8,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
+			<head>
+				<title>NextJS Test App</title>
+			</head>
 			<body>{children}</body>
 		</html>
 	);
