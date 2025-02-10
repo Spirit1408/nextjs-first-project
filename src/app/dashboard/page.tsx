@@ -1,8 +1,9 @@
 import CustomLink from "../components/CustomLink";
 
-export interface DashboardPageProps {
-	// props
-}
+/* eslint-disable @typescript-eslint/no-empty-object-type */
+export interface DashboardPageProps {}
+/* eslint-enable @typescript-eslint/no-empty-object-type */
+
 
 export default function DashboardPage({}: DashboardPageProps) {
 	return (

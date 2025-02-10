@@ -1,8 +1,8 @@
 import CustomLink from "@/app/components/CustomLink";
 
-export interface SettingsPageProps {
-	// props
-}
+/* eslint-disable @typescript-eslint/no-empty-object-type */
+export interface SettingsPageProps {}
+/* eslint-enable @typescript-eslint/no-empty-object-type */ 
 
 export default function SettingsPage({}: SettingsPageProps) {
 	return (

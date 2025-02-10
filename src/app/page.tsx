@@ -15,7 +15,8 @@ export default function Home() {
 			<ClientComponent>
 				<ServerComponentCopy />
 			</ClientComponent>
-			<CustomLink href="/dashboard">To dashboard</CustomLink>
+			<CustomLink href="/dashboard">To dashboard</CustomLink>{" "}
+			<CustomLink href="/companies">To companies</CustomLink>
 		</main>
 	);
 }
