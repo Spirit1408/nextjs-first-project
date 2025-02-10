@@ -2,6 +2,7 @@ import AddCompanyButton from "./components/add-company-button";
 import ClientComponent from "./components/client-component";
 import ServerComponent from "./components/server-component";
 import ServerComponentCopy from "./components/server-component-copy";
+import CustomLink from "./components/CustomLink";
 
 export default function Home() {
 	return (
@@ -14,6 +15,7 @@ export default function Home() {
 			<ClientComponent>
 				<ServerComponentCopy />
 			</ClientComponent>
+			<CustomLink href="/dashboard">To dashboard</CustomLink>
 		</main>
 	);
 }
