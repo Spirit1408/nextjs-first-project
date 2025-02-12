@@ -1,9 +1,9 @@
-import AddCompanyButton from "../components/add-company-button";
-import CompanyRow from "../components/company-row";
-import CompanyTable from "../components/company-table";
-import Header from "../components/header";
-import SearchInput from "../components/search-input";
-import Toolbar from "../components/toolbar";
+import AddCompanyButton from "../../components/add-company-button";
+import CompanyRow from "../../components/company-row";
+import CompanyTable from "../../components/company-table";
+import Header from "../../components/header";
+import SearchInput from "../../components/search-input";
+import Toolbar from "../../components/toolbar";
 import { Status } from "@/app/components/status-label";
 
 /* eslint-disable @typescript-eslint/no-empty-object-type */

@@ -1,4 +1,4 @@
-import Header from "../../components/header";
+import Header from "../../../components/header";
 
 export interface PageProps {
 	params: { id: string[] };

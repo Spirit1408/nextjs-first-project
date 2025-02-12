@@ -6,7 +6,7 @@ export interface SettingsPageProps {}
 
 export default function SettingsPage({}: SettingsPageProps) {
 	return (
-		<main>
+		<main className="px-10 pt-5">
 			<h1 className="text-xl">Settings Page</h1>
 			<CustomLink href="/">To home page</CustomLink>
 		</main>
