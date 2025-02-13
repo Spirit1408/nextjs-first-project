@@ -3,6 +3,7 @@ import ClientComponent from "./components/client-component";
 import ServerComponent from "./components/server-component";
 import ServerComponentCopy from "./components/server-component-copy";
 import CustomLink from "./components/CustomLink";
+import MagickButton from "./components/magic-button";
 
 export default function Home() {
 	return (
@@ -16,7 +17,8 @@ export default function Home() {
 				<ServerComponentCopy />
 			</ClientComponent>
 			<CustomLink href="/dashboard">To dashboard</CustomLink>{" "}
-			<CustomLink href="/companies">To companies</CustomLink>
+			<CustomLink href="/companies">To companies</CustomLink>{" "}
+			<MagickButton />
 		</main>
 	);
 }
