@@ -7,7 +7,8 @@ export interface DashboardPageProps {}
 export default function DashboardPage({}: DashboardPageProps) {
 	return (
 		<>
-			<Header>Dashboard</Header>
+			<Header>Dashboard / New companies</Header>
+			<div className="text-2xl text-center mt-5">Some additional info</div>
 		</>
 	);
 }
