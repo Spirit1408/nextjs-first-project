@@ -40,6 +40,11 @@ export interface Company {
 	avatar?: string;
 	categoryId: string;
 	countryId: string;
+	categoryTitle: string;
+	status: string;
+	hasPromotions: boolean;
+	countryTitle: string;
+	joinedDate: number;
 }
 
 export interface Promotion {
