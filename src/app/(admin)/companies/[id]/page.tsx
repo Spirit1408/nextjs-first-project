@@ -6,26 +6,27 @@ import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
 import { notFound } from "next/navigation";
 
 export interface PageProps {
-	params: { id: string };
+	params: Promise<{ id: string }>;
 }
 
 export default async function Page({ params }: PageProps) {
+	const { id } = await params;
+
 	const queryClient = getQueryClient();
 
 	await queryClient.prefetchQuery({
-		queryKey: ["companies", params.id],
-		queryFn: () => getCompany(params.id, { cache: "no-store" }),
+		queryKey: ["companies", id],
+		queryFn: () => getCompany(id, { cache: "no-store" }),
 		staleTime: 10 * 1000,
 	});
 
 	await queryClient.prefetchQuery({
-		queryKey: ["promotions", params.id],
-		queryFn: () =>
-			getPromotions({ companyId: params.id }, { cache: "no-store" }),
+		queryKey: ["promotions", id],
+		queryFn: () => getPromotions({ companyId: id }, { cache: "no-store" }),
 		staleTime: 10 * 1000,
 	});
 
-	const company = queryClient.getQueryData(["companies", params.id]) as Company;
+	const company = queryClient.getQueryData(["companies", id]) as Company;
 
 	if (!company) {
 		notFound();
@@ -37,11 +38,11 @@ export default async function Page({ params }: PageProps) {
 		<HydrationBoundary state={dehydratedState}>
 			<div className="py-6 px-10 grid grid-cols-12 gap-5">
 				<div className="col-span-3">
-					<CompanyInfo companyId={params.id} />
+					<CompanyInfo companyId={id} />
 				</div>
 
 				<div className="col-span-9">
-					<CompanyPromotions companyId={params.id} />
+					<CompanyPromotions companyId={id} />
 				</div>
 			</div>
 		</HydrationBoundary>
