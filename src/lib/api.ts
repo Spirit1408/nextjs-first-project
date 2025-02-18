@@ -41,7 +41,7 @@ export interface Company {
 	categoryId: string;
 	countryId: string;
 	categoryTitle: string;
-	status: string;
+	status: CompanyStatus;
 	hasPromotions: boolean;
 	countryTitle: string;
 	joinedDate: number;

@@ -6,11 +6,7 @@ import SummaryTableCell from "@/app/components/summary-table-cell";
 import MagicButton from "@/app/components/magic-button";
 
 export default async function Page() {
-	const data = await new Promise((resolve) => {
-		setTimeout(() => {
-			resolve(getSummarySales());
-		}, 4000);
-	});
+	const data = await getSummarySales();
 
 	return (
 		<DashboardCard
